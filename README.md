@@ -40,7 +40,7 @@ Add all of the files in the [Classes](StackViewBarChartExample/Classes/) directo
 Add to your Cartfile:
 
 ```
-github "haojianzong/StackViewBarChart" ~> 0.5.1
+github "haojianzong/StackViewBarChart" ~> 0.5.2
 ```
 
 Then make sure to link the frameworks and `import StackViewBarChart` in your code.
