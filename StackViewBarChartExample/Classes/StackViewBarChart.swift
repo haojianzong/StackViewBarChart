@@ -29,7 +29,7 @@ public class StackViewBarChart: UIView {
         static let unitWidth: CGFloat = 30.0
     }
 
-    public var numberList: [Data] = [
+    public var dataList: [Data] = [
         Data(legend: "M", number: 7),
         Data(legend: "T", number: 8),
         Data(legend: "W", number: 3),
@@ -65,12 +65,12 @@ public class StackViewBarChart: UIView {
 
     func factoryViewList(containerHeight: CGFloat) -> [UIView] {
 
-        let maxNumber = numberList.reduce(0) {
+        let maxNumber = dataList.reduce(0) {
             return max($1.number, $0)
         }
 
         var views = [UIView]()
-        for (index, data) in numberList.enumerated() {
+        for (index, data) in dataList.enumerated() {
             let bar = BarView()
             bar.numberLabel.text = String(data.number)
             bar.legendLabel.text = data.legend
@@ -79,7 +79,7 @@ public class StackViewBarChart: UIView {
             bar.containerHeight = containerHeight
             bar.barHeightPercentage = CGFloat(data.number) / CGFloat(maxNumber)
 
-            bar.bar.backgroundColor = Constants.fromColor.toColor(Constants.toColor, percentage: CGFloat(index) / CGFloat(numberList.count))
+            bar.bar.backgroundColor = Constants.fromColor.toColor(Constants.toColor, percentage: CGFloat(index) / CGFloat(dataList.count))
             views.append(bar)
         }
 

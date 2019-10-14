@@ -12,6 +12,9 @@
 		231CCC762352BECB00BC160D /* UIColor+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A78482352108C001862E4 /* UIColor+Percentage.swift */; };
 		231CCC772352BECB00BC160D /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A784A2352109A001862E4 /* UIColor+Helper.swift */; };
 		231CCC782352BECB00BC160D /* LayoutUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238DE2A22352210800FDFB16 /* LayoutUtility.swift */; };
+		23317B7E2354B8A000DF6F96 /* UIColor+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A78482352108C001862E4 /* UIColor+Percentage.swift */; };
+		23317B7F2354B8A000DF6F96 /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A784A2352109A001862E4 /* UIColor+Helper.swift */; };
+		23317B802354B8A000DF6F96 /* LayoutUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238DE2A22352210800FDFB16 /* LayoutUtility.swift */; };
 		23515BA52353060B00CB95CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23515BA42353060B00CB95CA /* AppDelegate.swift */; };
 		23515BA72353060B00CB95CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23515BA62353060B00CB95CA /* SceneDelegate.swift */; };
 		23515BA92353060B00CB95CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23515BA82353060B00CB95CA /* ViewController.swift */; };
@@ -230,7 +233,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				23515BA92353060B00CB95CA /* ViewController.swift in Sources */,
+				23317B7E2354B8A000DF6F96 /* UIColor+Percentage.swift in Sources */,
+				23317B802354B8A000DF6F96 /* LayoutUtility.swift in Sources */,
 				23515BA52353060B00CB95CA /* AppDelegate.swift in Sources */,
+				23317B7F2354B8A000DF6F96 /* UIColor+Helper.swift in Sources */,
 				23515BA72353060B00CB95CA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
