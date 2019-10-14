@@ -2,7 +2,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Twitter](https://img.shields.io/badge/twitter-@haojianzong.svg?style=flat)](http://twitter.com/haojianzong)
 
-<img height="200" align="left" src="https://github.com/haojianzong/StackViewBarChart/blob/master/intro.jpg" />
+<img src="https://github.com/haojianzong/StackViewBarChart/blob/master/intro.jpg" />
 
 Create a simple bar chart with UIStackView, because...why not?
 
@@ -40,7 +40,7 @@ Add all of the files in the [Classes](StackViewBarChartExample/Classes/) directo
 Add to your Cartfile:
 
 ```
-github "haojianzong/StackViewBarChart" ~> 0.5.1
+github "haojianzong/StackViewBarChart" ~> 0.5.2
 ```
 
 Then make sure to link the frameworks and `import StackViewBarChart` in your code.
