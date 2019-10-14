@@ -24,8 +24,14 @@ public class BarView: UIView {
         }
     }
 
+    public var barHeightConstant: CGFloat? {
+        didSet {
+            updateBarHeight()
+        }
+    }
+
     // The bar height percentage, doesn't contain the legend and number.
-    public var barHeightPercentage: CGFloat = 0.5 {
+    public var barHeightPercentage: CGFloat? {
         didSet {
             updateBarHeight()
         }
@@ -39,7 +45,14 @@ public class BarView: UIView {
 
     private let barHeightConstraint: NSLayoutConstraint
 
+    // When both barHeightConstant and barHeightPercentage is set, prefer barHeightConstant
     private func updateBarHeight() {
+
+        guard let barHeightPercentage = barHeightPercentage else {
+            barHeightConstraint.constant = barHeightConstant ?? 0
+            return
+        }
+
         barHeightConstraint.constant = barMaxHeight * barHeightPercentage
     }
 
@@ -52,7 +65,7 @@ public class BarView: UIView {
         stackView.axis = .vertical
         stackView.spacing = Constants.itemSpacing
 
-        barHeightConstraint = bar.heightAnchor.constraint(equalToConstant: frame.height * barHeightPercentage)
+        barHeightConstraint = bar.heightAnchor.constraint(equalToConstant: 0)
 
         super.init(frame: frame)
 

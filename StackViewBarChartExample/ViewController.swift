@@ -42,13 +42,14 @@ class ViewController: UIViewController {
     }
 
     @objc private func reload() {
-        self.barChart.dataList = [.init(legend: "M", number: UInt.random(in: 0...10)),
-                                  .init(legend: "T", number: UInt.random(in: 2...10)),
-                                  .init(legend: "W", number: UInt.random(in: 7...20)),
-                                  .init(legend: "T", number: UInt.random(in: 1...8)),
-                                  .init(legend: "F", number: UInt.random(in: 8...30)),
-                                  .init(legend: "S", number: UInt.random(in: 1...20)),
-                                  .init(legend: "S", number: UInt.random(in: 2...10))
+        self.barChart.dataList = [
+            .init(legend: "M", number: UInt.random(in: 0...10)),
+            .init(legend: "T", number: UInt.random(in: 0...10)),
+            .init(legend: "W", number: UInt.random(in: 0...10)),
+            .init(legend: "T", number: UInt.random(in: 0...10)),
+            .init(legend: "F", number: UInt.random(in: 0...10)),
+            .init(legend: "S", number: UInt.random(in: 0...10)),
+            .init(legend: "S", number: UInt.random(in: 0...10))
         ]
     }
 }

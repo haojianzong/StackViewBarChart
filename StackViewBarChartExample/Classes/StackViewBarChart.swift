@@ -25,18 +25,18 @@ public class StackViewBarChart: UIView {
         static let fromColor = UIColor(hex: 0x0D9675, alpha: 1.0)
         static let toColor = UIColor(hex: 0x177087, alpha: 1.0)
 
-        static let unitHeight: CGFloat = 5.0
-        static let unitWidth: CGFloat = 30.0
+        static let unitHeight: CGFloat = 15.0
+        static let unitWidth: CGFloat = 20.0
     }
 
     public var dataList: [Data] = [
-        Data(legend: "M", number: 7),
-        Data(legend: "T", number: 8),
-        Data(legend: "W", number: 3),
-        Data(legend: "T", number: 3),
-        Data(legend: "F", number: 2),
-        Data(legend: "S", number: 7),
-        Data(legend: "S", number: 7),
+        Data(legend: "M", number: 0),
+        Data(legend: "T", number: 0),
+        Data(legend: "W", number: 0),
+        Data(legend: "T", number: 0),
+        Data(legend: "F", number: 0),
+        Data(legend: "S", number: 0),
+        Data(legend: "S", number: 0),
         ] {
         didSet {
             setNeedsLayout()
@@ -69,6 +69,8 @@ public class StackViewBarChart: UIView {
             return max($1.number, $0)
         }
 
+        let shouldUseRelativeHeight = CGFloat(maxNumber) * Constants.unitHeight > (containerHeight / 2.0)
+
         var views = [UIView]()
         for (index, data) in dataList.enumerated() {
             let bar = BarView()
@@ -77,7 +79,14 @@ public class StackViewBarChart: UIView {
             bar.widthAnchor.constraint(equalToConstant: Constants.unitWidth).isActive = true
 
             bar.containerHeight = containerHeight
-            bar.barHeightPercentage = CGFloat(data.number) / CGFloat(maxNumber)
+
+            if shouldUseRelativeHeight {
+                // Each bar height is relative to the max bar height, while max bar height is 1.0
+                bar.barHeightPercentage = CGFloat(data.number) / CGFloat(maxNumber)
+            } else {
+                // Prefers constant unit height when bar height is within half of container height
+                bar.barHeightConstant = CGFloat(data.number) * Constants.unitHeight
+            }
 
             bar.bar.backgroundColor = Constants.fromColor.toColor(Constants.toColor, percentage: CGFloat(index) / CGFloat(dataList.count))
             views.append(bar)

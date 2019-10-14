@@ -68,13 +68,14 @@ Create a StackViewBarChart instance then set its `numberList` property with cust
             barChart.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
 
             // Set the data
-            barChart.numberList = [StackViewBarChart.Data(legend: "M", number: 0),
-                                   StackViewBarChart.Data(legend: "T", number: 2),
-                                   StackViewBarChart.Data(legend: "W", number: 7),
-                                   StackViewBarChart.Data(legend: "T", number: 8),
-                                   StackViewBarChart.Data(legend: "F", number: 30),
-                                   StackViewBarChart.Data(legend: "S", number: 20),
-                                   StackViewBarChart.Data(legend: "S", number: 10)
+            barChart.dataList = [
+              .init(legend: "M", number: 0),
+              .init(legend: "T", number: 2),
+              .init(legend: "W", number: 7),
+              .init(legend: "T", number: 8),
+              .init(legend: "F", number: 30),
+              .init(legend: "S", number: 20),
+              .init(legend: "S", number: 10)
         }
     }
     ```  

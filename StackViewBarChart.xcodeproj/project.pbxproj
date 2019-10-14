@@ -15,6 +15,8 @@
 		23317B7E2354B8A000DF6F96 /* UIColor+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A78482352108C001862E4 /* UIColor+Percentage.swift */; };
 		23317B7F2354B8A000DF6F96 /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A784A2352109A001862E4 /* UIColor+Helper.swift */; };
 		23317B802354B8A000DF6F96 /* LayoutUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238DE2A22352210800FDFB16 /* LayoutUtility.swift */; };
+		23317B822354BD2200DF6F96 /* StackViewBarChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23388F8A2352BE8E007186C5 /* StackViewBarChart.framework */; };
+		23317B832354BD2200DF6F96 /* StackViewBarChart.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23388F8A2352BE8E007186C5 /* StackViewBarChart.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23515BA52353060B00CB95CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23515BA42353060B00CB95CA /* AppDelegate.swift */; };
 		23515BA72353060B00CB95CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23515BA62353060B00CB95CA /* SceneDelegate.swift */; };
 		23515BA92353060B00CB95CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23515BA82353060B00CB95CA /* ViewController.swift */; };
@@ -22,6 +24,30 @@
 		23515BAE2353060B00CB95CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23515BAD2353060B00CB95CA /* Assets.xcassets */; };
 		23515BB12353060B00CB95CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23515BAF2353060B00CB95CA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23317B842354BD2200DF6F96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 230328002351623800C116E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23388F892352BE8E007186C5;
+			remoteInfo = StackViewBarChart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		23317B862354BD2200DF6F96 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				23317B832354BD2200DF6F96 /* StackViewBarChart.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2303281F2351624800C116E5 /* StackViewBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBarChart.swift; sourceTree = "<group>"; };
@@ -52,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23317B822354BD2200DF6F96 /* StackViewBarChart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +90,7 @@
 			children = (
 				23515BA32353060B00CB95CA /* StackViewBarChartExample */,
 				230328092351623800C116E5 /* Products */,
+				23317B812354BD2200DF6F96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +111,13 @@
 				239A784723521080001862E4 /* Helper */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		23317B812354BD2200DF6F96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		23515BA32353060B00CB95CA /* StackViewBarChartExample */ = {
@@ -148,10 +183,12 @@
 				23515B9E2353060B00CB95CA /* Sources */,
 				23515B9F2353060B00CB95CA /* Frameworks */,
 				23515BA02353060B00CB95CA /* Resources */,
+				23317B862354BD2200DF6F96 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				23317B852354BD2200DF6F96 /* PBXTargetDependency */,
 			);
 			name = StackViewBarChartExample;
 			productName = StackViewBarChartExample;
@@ -242,6 +279,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23317B852354BD2200DF6F96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23388F892352BE8E007186C5 /* StackViewBarChart */;
+			targetProxy = 23317B842354BD2200DF6F96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		23515BAA2353060B00CB95CA /* Main.storyboard */ = {
@@ -395,7 +440,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5;
+				MARKETING_VERSION = 0.5.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakehao.ios.StackViewBarChartKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -424,7 +469,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5;
+				MARKETING_VERSION = 0.5.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakehao.ios.StackViewBarChartKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
