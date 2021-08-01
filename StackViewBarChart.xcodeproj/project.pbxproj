@@ -88,6 +88,7 @@
 		230327FF2351623800C116E5 = {
 			isa = PBXGroup;
 			children = (
+				231CCC732352BEB800BC160D /* Sources */,
 				23515BA32353060B00CB95CA /* StackViewBarChartExample */,
 				230328092351623800C116E5 /* Products */,
 				23317B812354BD2200DF6F96 /* Frameworks */,
@@ -103,14 +104,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		231CCC732352BEB800BC160D /* Classes */ = {
+		231CCC732352BEB800BC160D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				239A78452352050B001862E4 /* BarView.swift */,
 				2303281F2351624800C116E5 /* StackViewBarChart.swift */,
 				239A784723521080001862E4 /* Helper */,
 			);
-			path = Classes;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		23317B812354BD2200DF6F96 /* Frameworks */ = {
@@ -123,7 +124,6 @@
 		23515BA32353060B00CB95CA /* StackViewBarChartExample */ = {
 			isa = PBXGroup;
 			children = (
-				231CCC732352BEB800BC160D /* Classes */,
 				23515BA42353060B00CB95CA /* AppDelegate.swift */,
 				23515BA62353060B00CB95CA /* SceneDelegate.swift */,
 				23515BA82353060B00CB95CA /* ViewController.swift */,
