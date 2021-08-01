@@ -107,9 +107,7 @@
 		231CCC732352BEB800BC160D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				239A78452352050B001862E4 /* BarView.swift */,
-				2303281F2351624800C116E5 /* StackViewBarChart.swift */,
-				239A784723521080001862E4 /* Helper */,
+				2349A02226B6A145006E74C4 /* StackViewBarChart */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -119,6 +117,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2349A02226B6A145006E74C4 /* StackViewBarChart */ = {
+			isa = PBXGroup;
+			children = (
+				239A784723521080001862E4 /* Helper */,
+				239A78452352050B001862E4 /* BarView.swift */,
+				2303281F2351624800C116E5 /* StackViewBarChart.swift */,
+			);
+			path = StackViewBarChart;
 			sourceTree = "<group>";
 		};
 		23515BA32353060B00CB95CA /* StackViewBarChartExample */ = {
